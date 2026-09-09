@@ -30,11 +30,9 @@ Simply touching a building doesn't destroy it. The hand must actually be perform
 - Static ground collision
 - Separate normal and attacking collision behavior
 
-## 🎥 Gameplay Demo
+https://github.com/user-attachments/assets/c133c08a-b13c-4a1c-9e79-e301b785c330
 
-![Monster Arm Game Screenshot](media/gameplay.mov)
 
-Gameplay footage coming soon.
 
 ## 🛠️ Built With
 
