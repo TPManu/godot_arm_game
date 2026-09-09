@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dwpk6irqude1q"]
+
+[ext_resource type="Script" uid="uid://c55rade8m0a5j" path="res://building.gd" id="1_5j34s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0tot"]
+size = Vector2(123, 301)
+
+[node name="Building" type="AnimatableBody2D" unique_id=368249172]
+script = ExtResource("1_5j34s")
+
+[node name="BuildingBody" type="ColorRect" parent="." unique_id=630675956]
+offset_left = -60.0
+offset_top = -301.0
+offset_right = 60.0
+offset_bottom = -1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=296501622]
+position = Vector2(0, -151)
+shape = SubResource("RectangleShape2D_q0tot")

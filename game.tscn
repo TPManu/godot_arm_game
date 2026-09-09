@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cipg6xvhrad8x"]
+
+[ext_resource type="Script" uid="uid://bi02yosq0kojn" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="Script" uid="uid://bbcybypxlweww" path="res://monster_hand.gd" id="3_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://cjs8to4jixsof" path="res://monster_hand.tscn" id="3_feb5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_napjg"]
+size = Vector2(1152, 120)
+
+[node name="Game" type="Node2D" unique_id=335388130]
+script = ExtResource("1_feb5d")
+
+[node name="Monster" type="Node2D" parent="." unique_id=965362604]
+position = Vector2(200, 300)
+
+[node name="MonsterBody" type="ColorRect" parent="Monster" unique_id=1530080570]
+offset_left = -51.0
+offset_top = -50.0
+offset_right = 49.0
+offset_bottom = 50.0
+
+[node name="MonsterHand" parent="Monster" unique_id=2091972056 instance=ExtResource("3_feb5d")]
+position = Vector2(100, 80)
+script = ExtResource("3_fc0e3")
+
+[node name="CoinLabel" type="Label" parent="." unique_id=1909515576]
+offset_left = 33.0
+offset_top = 22.0
+offset_right = 94.0
+offset_bottom = 45.0
+text = "Coins: 0"
+
+[node name="BuildingTimer" type="Timer" parent="." unique_id=824387378]
+wait_time = 2.0
+autostart = true
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1017948514]
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=881418495]
+offset_top = 520.0
+offset_right = 1152.0
+offset_bottom = 640.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=236131035]
+position = Vector2(576, 580)
+shape = SubResource("RectangleShape2D_napjg")
